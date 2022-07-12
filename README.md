@@ -1,3 +1,3 @@
-# Frontend Mentor - REST Countries API with color theme switcher solution
+## React and redux app
 
 [Countrie](https://countries-ecru-five.vercel.app/);
