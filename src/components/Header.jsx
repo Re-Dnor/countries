@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { IoMoon, IoMoonOutline } from "react-icons/io5";
 import { Container } from "./Container";
-import { setTheme } from "../store/theme/theme-actions";
-import { clearControls } from "../store/controls/controls-actions";
+import { setTheme } from "../features/theme-slice";
+import { clearControls } from "../features/controls-slice";
 
 const HeaderEl = styled.header`
   box-shadow: var(--shadow);

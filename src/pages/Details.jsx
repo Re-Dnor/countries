@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../components/Button";
 import { Info } from "../components/Info";
-import { loadCountryByName, clearDetails } from "../store/details/details-actions";
+import { loadCountryByName, clearDetails } from "../features/details-slice";
 import { Loader } from "../components/Loader/Loader";
 
 export const Details = () => {
@@ -13,7 +13,7 @@ export const Details = () => {
   const navigate = useNavigate();
 
   const { currentCountry, error, status } = useSelector((state) => state.details);
-  console.log(currentCountry);
+
   useEffect(() => {
     dispatch(loadCountryByName(name));
     return () => {

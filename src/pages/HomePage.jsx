@@ -5,7 +5,7 @@ import { List } from "../components/List";
 import { Card } from "../components/Card";
 import { Controls } from "../components/Controls";
 import { Loader } from "../components/Loader/Loader";
-import { loadCountries } from "../store/countries/countries-actions";
+import { loadCountries } from "../features/countries-slice";
 
 export const HomePage = () => {
   const dispatch = useDispatch();

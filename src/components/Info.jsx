@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { loadNeighbors } from "../store/details/details-actions";
+import { loadNeighbors } from "../features/details-slice";
 
 const Wrapper = styled.section`
   margin-top: 3rem;
@@ -92,7 +92,7 @@ const Tag = styled.span`
 export const Info = (props) => {
   const dispatch = useDispatch();
   const neighbors = useSelector((state) => state.details.neighbors);
-  console.log(neighbors);
+
   const {
     name,
     nativeName,
