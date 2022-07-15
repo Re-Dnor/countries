@@ -18,7 +18,7 @@ const countriesSlice = createSlice({
   name: '@@countries',
   initialState,
   reducers: {
-    setLoading: (state, action) => {
+    setLoading: (state) => {
       return {
         ...state,
         status: 'loading',

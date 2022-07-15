@@ -4,14 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { List } from "../components/List";
 import { Card } from "../components/Card";
 import { Controls } from "../components/Controls";
-import { Loader } from "../components/Loader/Loader";
+import { Loader } from "../components/Loader";
 import { loadCountries } from "../features/countries-slice";
 
 export const HomePage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  // const countries = useSelector((state) => state.countries.list);
   const { status, error } = useSelector((state) => state.countries);
   const { search, region } = useSelector((state) => state.controls);
   const countries = useSelector((state) => {
@@ -20,17 +18,14 @@ export const HomePage = () => {
     );
   });
 
-  // зависимости
   useEffect(() => {
     dispatch(loadCountries());
   }, []);
   return (
     <>
       <Controls />
-
       {error && <h2>{error}</h2>}
       {status === "loading" && <Loader />}
-
       {status === "received" && (
         <List>
           {countries.map((c) => {

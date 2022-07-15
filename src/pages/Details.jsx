@@ -5,13 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../components/Button";
 import { Info } from "../components/Info";
 import { loadCountryByName, clearDetails } from "../features/details-slice";
-import { Loader } from "../components/Loader/Loader";
+import { Loader } from "../components/Loader";
 
 export const Details = () => {
   const dispatch = useDispatch();
   const { name } = useParams();
   const navigate = useNavigate();
-
   const { currentCountry, error, status } = useSelector((state) => state.details);
 
   useEffect(() => {

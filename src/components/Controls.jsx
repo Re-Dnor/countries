@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Search } from "./Search";
 import { CustomSelect } from "./CustomSelect";
 import { setRegion } from "../features/controls-slice";
+
 const optionsMap = {
   Africa: { value: "Africa", label: "Africa" },
   America: { value: "America", label: "America" },
@@ -10,6 +11,7 @@ const optionsMap = {
   Europe: { value: "Europe", label: "Europe" },
   Oceania: { value: "Oceania", label: "Oceania" },
 };
+
 const options = Object.values(optionsMap);
 
 const Wrapper = styled.div`
